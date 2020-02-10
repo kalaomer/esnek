@@ -5,5 +5,5 @@ import App from "./App";
 Vue.use(Esnek);
 
 new Vue({
-    render: h => h(App),
+  render: h => h(App),
 }).$mount('#app');

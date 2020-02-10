@@ -2,7 +2,7 @@
 
 ## Project setup
 ```
-yarn install
+yarn add @kalaomer/esnek
 ```
 
 ### Compiles and hot-reloads for development

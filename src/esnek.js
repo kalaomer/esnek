@@ -4,11 +4,11 @@ import Col from "./components/col.vue";
 
 
 const Esnek = {
-    install(Vue, options) {
-        Vue.component(Container.name, Container);
-        Vue.component(Row.name, Row);
-        Vue.component(Col.name, Col);
-    }
+  install(Vue, options) {
+    Vue.component(Container.name, Container);
+    Vue.component(Row.name, Row);
+    Vue.component(Col.name, Col);
+  }
 };
 
 
