@@ -1,12 +1,20 @@
 {
-  "name": "esnek",
+  "name": "@esnek/esnek",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "serve": "vue-cli-service serve --port 4095",
+    "build": "rollup --config & npm run css-compile",
+    "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/ -o dist/css/",
+    "css-example": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/ -o public/css/",
+    "watch-css": "nodemon --watch src/scss --ext scss --exec \"npm run css-example\""
   },
+  "style": "dist/css/esnek.css",
+  "sass": "src/scss/esnek.scss",
+  "main": "dist/esnek.js",
+  "module": "src/esnek.js",
   "dependencies": {
+    "change-case": "^4.1.1",
     "core-js": "^3.6.4",
     "vue": "^2.6.11"
   },
@@ -14,7 +22,31 @@
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-service": "~4.2.0",
     "node-sass": "^4.12.0",
+    "nodemon": "^2.0.2",
+    "rollup": "^1.31.0",
+    "rollup-plugin-vue": "^5.1.6",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "description": "## Project setup ``` yarn install ```",
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esnek/esnek.git"
+  },
+  "keywords": [
+    "esnek",
+    "bootstrap",
+    "vue",
+    "flex",
+    "grid"
+  ],
+  "author": "kalaomer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/esnek/esnek/issues"
+  },
+  "homepage": "https://github.com/esnek/esnek#readme"
 }
