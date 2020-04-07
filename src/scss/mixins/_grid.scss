@@ -69,45 +69,91 @@
 
     // Allow columns to stretch full width below their breakpoints
     @for $i from 1 through $columns {
-      .col#{$infix}-#{$i} {
+      %col#{$infix}-#{$i} {
         @extend %grid-column;
       }
+
+      @if $enable-css-output {
+        .col#{$infix}-#{$i} {
+          @extend %col#{$infix}-#{$i};
+        }
+      }
     }
-    .col#{$infix},
-    .col#{$infix}-auto {
+    %col#{$infix},
+    %col#{$infix}-auto {
       @extend %grid-column;
+    }
+
+    @if $enable-css-output {
+      .col#{$infix} {
+        @extend %col#{$infix};
+      }
+
+      .col#{$infix}-auto {
+        @extend %col#{$infix}-auto;
+      }
     }
 
     @include media-breakpoint-up($breakpoint, $breakpoints) {
       // Provide basic `.col-{bp}` classes for equal-width flexbox columns
-      .col#{$infix} {
+      %col#{$infix} {
         flex-basis: 0;
         flex-grow: 1;
         min-width: 0; // See https://github.com/twbs/bootstrap/issues/25410
         max-width: 100%;
       }
 
-      @for $i from 1 through $grid-row-columns {
-        .row-cols#{$infix}-#{$i} {
-          @include row-cols($i);
+      @if $enable-css-output {
+        .col#{$infix} {
+          @extend %col#{$infix};
         }
       }
 
-      .col#{$infix}-auto {
+      @for $i from 1 through $grid-row-columns {
+        %row-cols#{$infix}-#{$i} {
+          @include row-cols($i);
+        }
+
+        @if $enable-css-output {
+          .row-cols#{$infix}-#{$i} {
+            @extend %row-cols#{$infix}-#{$i};
+          }
+        }
+      }
+
+      %col#{$infix}-auto {
         @include make-col-auto();
       }
 
+      @if $enable-css-output {
+        .col#{$infix}-auto {
+          @extend %col#{$infix}-auto;
+        }
+      }
+
       @for $i from 1 through $columns {
-        .col#{$infix}-#{$i} {
+        %col#{$infix}-#{$i} {
           @include make-col($i, $columns);
+        }
+
+        @if $enable-css-output {
+          .col#{$infix}-#{$i} {
+            @extend %col#{$infix}-#{$i};
+          }
         }
       }
 
       // `$columns - 1` because offsetting by the width of an entire row isn't possible
       @for $i from 0 through ($columns - 1) {
         @if not ($infix == "" and $i == 0) { // Avoid emitting useless .offset-0
-          .offset#{$infix}-#{$i} {
+          %offset#{$infix}-#{$i} {
             @include make-col-offset($i, $columns);
+          }
+
+          @if $enable-css-output {
+            .offset#{$infix}-#{$i} {
+              @extend %offset#{$infix}-#{$i};
+            }
           }
         }
       }

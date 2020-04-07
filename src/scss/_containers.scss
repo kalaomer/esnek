@@ -4,20 +4,38 @@
 
 @if $enable-grid-classes {
   // Single container class with breakpoint max-widths
-  .container {
+  %container {
     @include make-container();
     @include make-container-max-widths();
   }
 
+  @if $enable-css-output {
+    .container {
+      @extend %container;
+    }
+  }
+
   // 100% wide container at all breakpoints
-  .container-fluid {
+  %container-fluid {
     @include make-container();
+  }
+
+  @if $enable-css-output {
+    .container-fluid {
+      @extend %container-fluid;
+    }
   }
 
   // Responsive containers that are 100% wide until a breakpoint
   @each $breakpoint, $container-max-width in $container-max-widths {
-    .container-#{$breakpoint} {
-      @extend .container-fluid;
+    %container-#{$breakpoint} {
+      @extend %container-fluid;
+    }
+
+    @if $enable-css-output {
+      .container-#{$breakpoint} {
+        @extend %container-#{$breakpoint};
+      }
     }
 
     @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
@@ -30,8 +48,14 @@
 
       @each $name, $width in $grid-breakpoints {
         @if ($extend-breakpoint) {
-          .container#{breakpoint-infix($name, $grid-breakpoints)} {
+          %container#{breakpoint-infix($name, $grid-breakpoints)} {
             @extend %responsive-container-#{$breakpoint};
+          }
+
+          @if $enable-css-output {
+            .container#{breakpoint-infix($name, $grid-breakpoints)} {
+              @extend %responsive-container-#{$breakpoint};
+            }
           }
 
           // Once the current breakpoint is reached, stop extending

@@ -25,10 +25,16 @@
     // Don't prefix if value key is null (eg. with shadow class)
     $property-class-modifier: if($key, if($property-class == "" and $infix == "", "", "-") + $key, "");
 
-    .#{$property-class + $infix + $property-class-modifier} {
+    %#{$property-class + $infix + $property-class-modifier} {
       @each $property in $properties {
         // stylelint-disable-next-line declaration-no-important
         #{$property}: $value !important;
+      }
+    }
+
+    @if $enable-css-output {
+      .#{$property-class + $infix + $property-class-modifier} {
+        @extend %#{$property-class + $infix + $property-class-modifier};
       }
     }
   }
