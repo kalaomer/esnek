@@ -17,7 +17,7 @@
   "unpkg": "dist/esnek.min.js",
   "files": [
     "dist/*",
-    "src/**/*.vue"
+    "src/*"
   ],
   "dependencies": {
     "change-case": "^4.1.2"
