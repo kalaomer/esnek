@@ -1,15 +1,13 @@
-import Container from "./components/container.vue";
-import Row from "./components/row.vue";
-import Col from "./components/col.vue";
+// iife/cjs usage extends esm default export - so import it all
+import plugin, * as components from '@/esnek.esm';
 
-
-const Esnek = {
-  install(Vue, options) {
-    Vue.component(Container.name, Container);
-    Vue.component(Row.name, Row);
-    Vue.component(Col.name, Col);
+// Attach named exports directly to plugin. IIFE/CJS will
+// only expose one global var, with component exports exposed as properties of
+// that global var (eg. plugin.component)
+Object.entries(components).forEach(([componentName, component]) => {
+  if (componentName !== 'default') {
+    plugin[componentName] = component;
   }
-};
+});
 
-
-export default Esnek;
+export default plugin;

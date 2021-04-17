@@ -92,6 +92,7 @@
 <style lang="scss">
   @import "../src/scss/functions";
   @import "../src/scss/variables";
+  @import "../src/scss/esnek-grid";
 
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
