@@ -74,7 +74,7 @@
       }
 
       @if $enable-css-output {
-        .col#{$infix}-#{$i} {
+        .es-col#{$infix}-#{$i} {
           @extend %col#{$infix}-#{$i};
         }
       }
@@ -85,11 +85,11 @@
     }
 
     @if $enable-css-output {
-      .col#{$infix} {
+      .es-col#{$infix} {
         @extend %col#{$infix};
       }
 
-      .col#{$infix}-auto {
+      .es-col#{$infix}-auto {
         @extend %col#{$infix}-auto;
       }
     }
@@ -104,7 +104,7 @@
       }
 
       @if $enable-css-output {
-        .col#{$infix} {
+        .es-col#{$infix} {
           @extend %col#{$infix};
         }
       }
@@ -115,7 +115,7 @@
         }
 
         @if $enable-css-output {
-          .row-cols#{$infix}-#{$i} {
+          .es-row-cols#{$infix}-#{$i} {
             @extend %row-cols#{$infix}-#{$i};
           }
         }
@@ -126,7 +126,7 @@
       }
 
       @if $enable-css-output {
-        .col#{$infix}-auto {
+        .es-col#{$infix}-auto {
           @extend %col#{$infix}-auto;
         }
       }
@@ -137,7 +137,7 @@
         }
 
         @if $enable-css-output {
-          .col#{$infix}-#{$i} {
+          .es-col#{$infix}-#{$i} {
             @extend %col#{$infix}-#{$i};
           }
         }
@@ -151,7 +151,7 @@
           }
 
           @if $enable-css-output {
-            .offset#{$infix}-#{$i} {
+            .es-offset#{$infix}-#{$i} {
               @extend %offset#{$infix}-#{$i};
             }
           }

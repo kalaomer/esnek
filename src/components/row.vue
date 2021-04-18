@@ -1,5 +1,5 @@
 <template>
-  <div class="es-row row" :class="rowClasses">
+  <div class="es-row" :class="rowClasses">
     <slot/>
   </div>
 </template>
@@ -28,10 +28,10 @@
         let classes = [];
 
         if (this.col) {
-          classes.push(`row-cols-${this.col}`);
+          classes.push(`es-row-cols-${this.col}`);
         }
 
-        this.noGutter ? classes.push('no-gutters') : false;
+        this.noGutter ? classes.push('es-no-gutters') : false;
 
         const propClasses = ["alignContentStart", "alignContentCenter", "alignContentEnd",
           "justifyContentStart", "justifyContentCenter", "justifyContentEnd", "justifyContentAround", "justifyContentBetween"];

@@ -148,9 +148,9 @@ var __vue_render__$2 = function __vue_render__() {
   var _c = _vm._self._c || _h;
 
   return _c('div', {
-    staticClass: "es-container container-fluid",
+    staticClass: "es-container-fluid",
     class: {
-      'container': !_vm.fluid
+      'es-container': !_vm.fluid
     }
   }, [_vm._t("default")], 2);
 };
@@ -161,10 +161,10 @@ var __vue_staticRenderFns__$2 = [];
 var __vue_inject_styles__$2 = undefined;
 /* scoped */
 
-var __vue_scope_id__$2 = "data-v-50b33448";
+var __vue_scope_id__$2 = "data-v-14dd5250";
 /* module identifier */
 
-var __vue_module_identifier__$2 = "data-v-50b33448";
+var __vue_module_identifier__$2 = "data-v-14dd5250";
 /* functional template */
 
 var __vue_is_functional_template__$2 = false;
@@ -263,10 +263,10 @@ var script$1 = {
       var classes = [];
 
       if (this.col) {
-        classes.push("row-cols-".concat(this.col));
+        classes.push("es-row-cols-".concat(this.col));
       }
 
-      this.noGutter ? classes.push('no-gutters') : false;
+      this.noGutter ? classes.push('es-no-gutters') : false;
       var propClasses = ["alignContentStart", "alignContentCenter", "alignContentEnd", "justifyContentStart", "justifyContentCenter", "justifyContentEnd", "justifyContentAround", "justifyContentBetween"];
 
       for (var _i = 0, _propClasses = propClasses; _i < _propClasses.length; _i++) {
@@ -292,7 +292,7 @@ var __vue_render__$1 = function __vue_render__() {
   var _c = _vm._self._c || _h;
 
   return _c('div', {
-    staticClass: "es-row row",
+    staticClass: "es-row",
     class: _vm.rowClasses
   }, [_vm._t("default")], 2);
 };
@@ -303,10 +303,10 @@ var __vue_staticRenderFns__$1 = [];
 var __vue_inject_styles__$1 = undefined;
 /* scoped */
 
-var __vue_scope_id__$1 = "data-v-172304d0";
+var __vue_scope_id__$1 = "data-v-18509c78";
 /* module identifier */
 
-var __vue_module_identifier__$1 = "data-v-172304d0";
+var __vue_module_identifier__$1 = "data-v-18509c78";
 /* functional template */
 
 var __vue_is_functional_template__$1 = false;
@@ -353,7 +353,7 @@ var script = {
       }
 
       if (this.size) {
-        classes.push("col-".concat(this.size));
+        classes.push("es-col-".concat(this.size));
       }
 
       var propSizeClasses = ["xl", "lg", "md", "sm", "xs"];
@@ -363,9 +363,9 @@ var script = {
 
         if (this[_c]) {
           if (this[_c] === true) {
-            classes.push("col-".concat(_c));
+            classes.push("es-col-".concat(_c));
           } else {
-            classes.push("col-".concat(_c, "-").concat(this[_c]));
+            classes.push("es-col-".concat(_c, "-").concat(this[_c]));
           }
         }
       }
@@ -385,7 +385,7 @@ var __vue_render__ = function __vue_render__() {
   var _c = _vm._self._c || _h;
 
   return _c('div', {
-    staticClass: "es-col col",
+    staticClass: "es-col",
     class: _vm.colClasses
   }, [_vm._t("default")], 2);
 };
@@ -396,10 +396,10 @@ var __vue_staticRenderFns__ = [];
 var __vue_inject_styles__ = undefined;
 /* scoped */
 
-var __vue_scope_id__ = "data-v-e74395fa";
+var __vue_scope_id__ = "data-v-5837f540";
 /* module identifier */
 
-var __vue_module_identifier__ = "data-v-e74395fa";
+var __vue_module_identifier__ = "data-v-5837f540";
 /* functional template */
 
 var __vue_is_functional_template__ = false;

@@ -106,13 +106,13 @@
   .colorized-container {
     margin-bottom: 2rem;
 
-    .row {
+    .es-row {
       background-color: $gray-400;
       border-radius: 4px;
       overflow: hidden;
     }
 
-    .col {
+    .es-col {
       border: 1px solid $gray-500;
       background-color: $gray-100;
 

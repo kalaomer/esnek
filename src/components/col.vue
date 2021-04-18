@@ -1,5 +1,5 @@
 <template>
-  <div class="es-col col" :class="colClasses">
+  <div class="es-col" :class="colClasses">
     <slot/>
   </div>
 </template>
@@ -39,7 +39,7 @@
         }
 
         if (this.size) {
-          classes.push(`col-${this.size}`);
+          classes.push(`es-col-${this.size}`);
         }
 
         const propSizeClasses = ["xl", "lg", "md", "sm", "xs"];
@@ -47,9 +47,9 @@
         for (let c of propSizeClasses) {
           if (this[c]) {
             if (this[c] === true) {
-              classes.push(`col-${c}`);
+              classes.push(`es-col-${c}`);
             } else {
-              classes.push(`col-${c}-${this[c]}`);
+              classes.push(`es-col-${c}-${this[c]}`);
             }
           }
         }

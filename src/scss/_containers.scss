@@ -10,7 +10,7 @@
   }
 
   @if $enable-css-output {
-    .container {
+    .es-container {
       @extend %container;
     }
   }
@@ -21,7 +21,7 @@
   }
 
   @if $enable-css-output {
-    .container-fluid {
+    .es-container-fluid {
       @extend %container-fluid;
     }
   }
@@ -33,7 +33,7 @@
     }
 
     @if $enable-css-output {
-      .container-#{$breakpoint} {
+      .es-container-#{$breakpoint} {
         @extend %container-#{$breakpoint};
       }
     }
@@ -53,7 +53,7 @@
           }
 
           @if $enable-css-output {
-            .container#{breakpoint-infix($name, $grid-breakpoints)} {
+            .es-container#{breakpoint-infix($name, $grid-breakpoints)} {
               @extend %responsive-container-#{$breakpoint};
             }
           }

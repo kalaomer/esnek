@@ -8,7 +8,7 @@
   }
 
   @if $enable-css-output {
-    .row {
+    .es-row {
       @extend %row;
     }
   }
@@ -19,15 +19,15 @@
     margin-right: 0;
     margin-left: 0;
 
-    > .col,
-    > [class*="col-"] {
+    > .es-col,
+    > [class*="es-col-"] {
       padding-right: 0;
       padding-left: 0;
     }
   }
 
   @if $enable-css-output {
-    .no-gutters {
+    .es-no-gutters {
       @extend %no-gutters;
     }
   }

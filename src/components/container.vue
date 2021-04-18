@@ -1,5 +1,5 @@
 <template>
-  <div class="es-container container-fluid" :class="{'container': ! fluid}">
+  <div class="es-container-fluid" :class="{'es-container': ! fluid}">
     <slot/>
   </div>
 </template>

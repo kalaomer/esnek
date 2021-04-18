@@ -98,9 +98,9 @@ var __vue_render__$2 = function () {
   var _c = _vm._self._c || _h;
 
   return _c('div', {
-    staticClass: "es-container container-fluid",
+    staticClass: "es-container-fluid",
     class: {
-      'container': !_vm.fluid
+      'es-container': !_vm.fluid
     }
   }, [_vm._t("default")], 2);
 };
@@ -111,7 +111,7 @@ var __vue_staticRenderFns__$2 = [];
 const __vue_inject_styles__$2 = undefined;
 /* scoped */
 
-const __vue_scope_id__$2 = "data-v-50b33448";
+const __vue_scope_id__$2 = "data-v-14dd5250";
 /* module identifier */
 
 const __vue_module_identifier__$2 = undefined;
@@ -225,10 +225,10 @@ var script$1 = {
       let classes = [];
 
       if (this.col) {
-        classes.push(`row-cols-${this.col}`);
+        classes.push(`es-row-cols-${this.col}`);
       }
 
-      this.noGutter ? classes.push('no-gutters') : false;
+      this.noGutter ? classes.push('es-no-gutters') : false;
       const propClasses = ["alignContentStart", "alignContentCenter", "alignContentEnd", "justifyContentStart", "justifyContentCenter", "justifyContentEnd", "justifyContentAround", "justifyContentBetween"];
 
       for (let c of propClasses) {
@@ -255,7 +255,7 @@ var __vue_render__$1 = function () {
   var _c = _vm._self._c || _h;
 
   return _c('div', {
-    staticClass: "es-row row",
+    staticClass: "es-row",
     class: _vm.rowClasses
   }, [_vm._t("default")], 2);
 };
@@ -266,7 +266,7 @@ var __vue_staticRenderFns__$1 = [];
 const __vue_inject_styles__$1 = undefined;
 /* scoped */
 
-const __vue_scope_id__$1 = "data-v-172304d0";
+const __vue_scope_id__$1 = "data-v-18509c78";
 /* module identifier */
 
 const __vue_module_identifier__$1 = undefined;
@@ -316,7 +316,7 @@ var script = {
       }
 
       if (this.size) {
-        classes.push(`col-${this.size}`);
+        classes.push(`es-col-${this.size}`);
       }
 
       const propSizeClasses = ["xl", "lg", "md", "sm", "xs"];
@@ -324,9 +324,9 @@ var script = {
       for (let c of propSizeClasses) {
         if (this[c]) {
           if (this[c] === true) {
-            classes.push(`col-${c}`);
+            classes.push(`es-col-${c}`);
           } else {
-            classes.push(`col-${c}-${this[c]}`);
+            classes.push(`es-col-${c}-${this[c]}`);
           }
         }
       }
@@ -349,7 +349,7 @@ var __vue_render__ = function () {
   var _c = _vm._self._c || _h;
 
   return _c('div', {
-    staticClass: "es-col col",
+    staticClass: "es-col",
     class: _vm.colClasses
   }, [_vm._t("default")], 2);
 };
@@ -360,7 +360,7 @@ var __vue_staticRenderFns__ = [];
 const __vue_inject_styles__ = undefined;
 /* scoped */
 
-const __vue_scope_id__ = "data-v-e74395fa";
+const __vue_scope_id__ = "data-v-5837f540";
 /* module identifier */
 
 const __vue_module_identifier__ = undefined;
