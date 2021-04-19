@@ -63,8 +63,5 @@
   "homepage": "https://github.com/esnek/esnek#readme",
   "peerDependencies": {
     "vue": "^2.6.12"
-  },
-  "engines": {
-    "node": ">=12"
   }
 }
