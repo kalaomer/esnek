@@ -158,12 +158,12 @@
 
         @if $enable-css-output {
           .#{$class-prefix}g#{$infix}-#{$key},
-          .#{$class-prefix}%gx#{$infix}-#{$key} {
+          .#{$class-prefix}gx#{$infix}-#{$key} {
             @extend %gx#{$infix}-#{$key};
           }
 
           .#{$class-prefix}g#{$infix}-#{$key},
-          .#{$class-prefix}%gy#{$infix}-#{$key} {
+          .#{$class-prefix}gy#{$infix}-#{$key} {
             @extend %gy#{$infix}-#{$key};
           }
         }
