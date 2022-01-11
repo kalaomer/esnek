@@ -1,6 +1,6 @@
 {
   "name": "@kalaomer/esnek",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "dev": "npm-run-all css-compile serve",
     "build": "cross-env NODE_ENV=production rollup --config rollup.config.js & npm run css-compile",
