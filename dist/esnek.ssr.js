@@ -248,7 +248,9 @@ var script$1 = {
   name: "es-row",
   props: {
     col: [Number, String],
-    noGutter: Boolean,
+    gutter: Number,
+    gutterX: Number,
+    gutterY: Number,
     alignContentStart: Boolean,
     alignContentCenter: Boolean,
     alignContentEnd: Boolean,
@@ -266,14 +268,16 @@ var script$1 = {
         classes.push("es-row-cols-".concat(this.col));
       }
 
-      this.noGutter ? classes.push('es-no-gutters') : false;
+      this.gutter !== undefined ? classes.push("es-g-".concat(this.gutter)) : false;
+      this.gutterX !== undefined ? classes.push("es-gx-".concat(this.gutter)) : false;
+      this.gutterY !== undefined ? classes.push("es-gy-".concat(this.gutter)) : false;
       var propClasses = ["alignContentStart", "alignContentCenter", "alignContentEnd", "justifyContentStart", "justifyContentCenter", "justifyContentEnd", "justifyContentAround", "justifyContentBetween"];
 
       for (var _i = 0, _propClasses = propClasses; _i < _propClasses.length; _i++) {
         var c = _propClasses[_i];
 
         if (this[c]) {
-          classes.push(paramCase(c));
+          classes.push(paramCase("es-".concat(c)));
         }
       }
 
@@ -303,10 +307,10 @@ var __vue_staticRenderFns__$1 = [];
 var __vue_inject_styles__$1 = undefined;
 /* scoped */
 
-var __vue_scope_id__$1 = "data-v-18509c78";
+var __vue_scope_id__$1 = "data-v-b7940c36";
 /* module identifier */
 
-var __vue_module_identifier__$1 = "data-v-18509c78";
+var __vue_module_identifier__$1 = "data-v-b7940c36";
 /* functional template */
 
 var __vue_is_functional_template__$1 = false;
@@ -339,7 +343,7 @@ var script = {
       var classes = [];
 
       if (this.order) {
-        classes.push("order-".concat(this.order));
+        classes.push("es-order-".concat(this.order));
       }
 
       var propClasses = ["alignSelfStart", "alignSelfCenter", "alignSelfEnd"];
@@ -348,7 +352,7 @@ var script = {
         var c = _propClasses[_i];
 
         if (this[c]) {
-          classes.push(paramCase(c));
+          classes.push(paramCase("es-".concat(c)));
         }
       }
 
@@ -396,10 +400,10 @@ var __vue_staticRenderFns__ = [];
 var __vue_inject_styles__ = undefined;
 /* scoped */
 
-var __vue_scope_id__ = "data-v-5837f540";
+var __vue_scope_id__ = "data-v-2fe8802c";
 /* module identifier */
 
-var __vue_module_identifier__ = "data-v-5837f540";
+var __vue_module_identifier__ = "data-v-2fe8802c";
 /* functional template */
 
 var __vue_is_functional_template__ = false;

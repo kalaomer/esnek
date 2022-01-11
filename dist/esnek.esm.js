@@ -210,7 +210,9 @@ var script$1 = {
   name: "es-row",
   props: {
     col: [Number, String],
-    noGutter: Boolean,
+    gutter: Number,
+    gutterX: Number,
+    gutterY: Number,
     alignContentStart: Boolean,
     alignContentCenter: Boolean,
     alignContentEnd: Boolean,
@@ -228,12 +230,14 @@ var script$1 = {
         classes.push(`es-row-cols-${this.col}`);
       }
 
-      this.noGutter ? classes.push('es-no-gutters') : false;
+      this.gutter !== undefined ? classes.push(`es-g-${this.gutter}`) : false;
+      this.gutterX !== undefined ? classes.push(`es-gx-${this.gutter}`) : false;
+      this.gutterY !== undefined ? classes.push(`es-gy-${this.gutter}`) : false;
       const propClasses = ["alignContentStart", "alignContentCenter", "alignContentEnd", "justifyContentStart", "justifyContentCenter", "justifyContentEnd", "justifyContentAround", "justifyContentBetween"];
 
       for (let c of propClasses) {
         if (this[c]) {
-          classes.push(paramCase(c));
+          classes.push(paramCase(`es-${c}`));
         }
       }
 
@@ -266,7 +270,7 @@ var __vue_staticRenderFns__$1 = [];
 const __vue_inject_styles__$1 = undefined;
 /* scoped */
 
-const __vue_scope_id__$1 = "data-v-18509c78";
+const __vue_scope_id__$1 = "data-v-b7940c36";
 /* module identifier */
 
 const __vue_module_identifier__$1 = undefined;
@@ -304,14 +308,14 @@ var script = {
       let classes = [];
 
       if (this.order) {
-        classes.push(`order-${this.order}`);
+        classes.push(`es-order-${this.order}`);
       }
 
       const propClasses = ["alignSelfStart", "alignSelfCenter", "alignSelfEnd"];
 
       for (let c of propClasses) {
         if (this[c]) {
-          classes.push(paramCase(c));
+          classes.push(paramCase(`es-${c}`));
         }
       }
 
@@ -360,7 +364,7 @@ var __vue_staticRenderFns__ = [];
 const __vue_inject_styles__ = undefined;
 /* scoped */
 
-const __vue_scope_id__ = "data-v-5837f540";
+const __vue_scope_id__ = "data-v-2fe8802c";
 /* module identifier */
 
 const __vue_module_identifier__ = undefined;

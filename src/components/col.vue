@@ -27,14 +27,14 @@
         let classes = [];
 
         if (this.order) {
-          classes.push(`order-${this.order}`);
+          classes.push(`es-order-${this.order}`);
         }
 
         const propClasses = ["alignSelfStart", "alignSelfCenter", "alignSelfEnd"];
 
         for (let c of propClasses) {
           if (this[c]) {
-            classes.push(changeCase.paramCase(c));
+            classes.push(changeCase.paramCase(`es-${c}`));
           }
         }
 

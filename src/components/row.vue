@@ -11,7 +11,9 @@
     name: "es-row",
     props: {
       col: [Number, String],
-      noGutter: Boolean,
+      gutter: Number,
+      gutterX: Number,
+      gutterY: Number,
 
       alignContentStart: Boolean,
       alignContentCenter: Boolean,
@@ -31,14 +33,16 @@
           classes.push(`es-row-cols-${this.col}`);
         }
 
-        this.noGutter ? classes.push('es-no-gutters') : false;
+        this.gutter !== undefined ? classes.push(`es-g-${this.gutter}`) : false;
+        this.gutterX !== undefined ? classes.push(`es-gx-${this.gutter}`) : false;
+        this.gutterY !== undefined ? classes.push(`es-gy-${this.gutter}`) : false;
 
         const propClasses = ["alignContentStart", "alignContentCenter", "alignContentEnd",
           "justifyContentStart", "justifyContentCenter", "justifyContentEnd", "justifyContentAround", "justifyContentBetween"];
 
         for (let c of propClasses) {
           if (this[c]) {
-            classes.push(changeCase.paramCase(c));
+            classes.push(changeCase.paramCase(`es-${c}`));
           }
         }
 

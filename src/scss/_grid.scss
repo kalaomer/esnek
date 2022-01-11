@@ -5,30 +5,33 @@
 @if $enable-grid-classes {
   %row {
     @include make-row();
+
+    > * {
+      @include make-col-ready();
+    }
   }
 
   @if $enable-css-output {
-    .es-row {
+    .#{$class-prefix}row {
       @extend %row;
     }
   }
+}
 
-  // Remove the negative margin from default .row, then the horizontal padding
-  // from all immediate children columns (to prevent runaway style inheritance).
-  %no-gutters {
-    margin-right: 0;
-    margin-left: 0;
 
-    > .es-col,
-    > [class*="es-col-"] {
-      padding-right: 0;
-      padding-left: 0;
-    }
+@if $enable-cssgrid {
+  %grid {
+    display: grid;
+    grid-template-rows: repeat(var(--#{$variable-prefix}rows, 1), 1fr);
+    grid-template-columns: repeat(var(--#{$variable-prefix}columns, #{$grid-columns}), 1fr);
+    gap: var(--#{$variable-prefix}gap, #{$grid-gutter-width});
+
+    @include make-cssgrid();
   }
 
   @if $enable-css-output {
-    .es-no-gutters {
-      @extend %no-gutters;
+    .#{$class-prefix}grid {
+      @extend %grid;
     }
   }
 }

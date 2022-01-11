@@ -4,10 +4,10 @@
       <h2>Col Order</h2>
       <es-row justify-content-end>
         <es-col :order="2">
-          1. kolon 2. sıra
+          1. sıra 2. sütun
         </es-col>
         <es-col :order="1">
-          2. kolon 1. sıra
+          1. sıra 1. sütun
         </es-col>
       </es-row>
     </es-container>
@@ -56,11 +56,11 @@
 
     <es-container class="colorized-container">
       <h2>No Gutter</h2>
-      <es-row no-gutter>
-        <es-col style="text-align: left">
+      <es-row :gutter="0" class="es-text-align-left">
+        <es-col>
           1. kolon
         </es-col>
-        <es-col style="text-align: left">
+        <es-col>
           2. kolon
         </es-col>
       </es-row>

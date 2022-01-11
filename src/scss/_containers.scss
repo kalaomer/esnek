@@ -4,24 +4,18 @@
 
 @if $enable-grid-classes {
   // Single container class with breakpoint max-widths
-  %container {
-    @include make-container();
-    @include make-container-max-widths();
-  }
-
-  @if $enable-css-output {
-    .es-container {
-      @extend %container;
-    }
-  }
-
-  // 100% wide container at all breakpoints
+  %container,
+    // 100% wide container at all breakpoints
   %container-fluid {
     @include make-container();
   }
 
   @if $enable-css-output {
-    .es-container-fluid {
+    .#{$class-prefix}container {
+      @extend %container;
+    }
+
+    .#{$class-prefix}container-fluid {
       @extend %container-fluid;
     }
   }
@@ -33,7 +27,7 @@
     }
 
     @if $enable-css-output {
-      .es-container-#{$breakpoint} {
+      .#{$class-prefix}container-#{$breakpoint} {
         @extend %container-#{$breakpoint};
       }
     }
@@ -53,7 +47,7 @@
           }
 
           @if $enable-css-output {
-            .es-container#{breakpoint-infix($name, $grid-breakpoints)} {
+            .#{$class-prefix}container#{breakpoint-infix($name, $grid-breakpoints)} {
               @extend %responsive-container-#{$breakpoint};
             }
           }
